@@ -1,7 +1,7 @@
 class NooxMac < Formula
   desc "Use an Android tablet as a macOS USB terminal display (macOS host bridge)"
   homepage "https://github.com/charlie-xing/noox"
-  url "https://github.com/charlie-xing/noox/releases/download/v0.1.0/noox-mac-0.1.0-macos.tar.gz"
+  url "https://github.com/charlie-xing/noox-releases/releases/download/v0.1.0/noox-mac-0.1.0-macos.tar.gz"
   sha256 "631d873ae595f8a528be364c647c3633594895d3b73cb958221b056b68929bdd"
   version "0.1.0"
   license "MIT"
