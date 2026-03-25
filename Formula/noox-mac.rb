@@ -24,6 +24,9 @@ class NooxMac < Formula
         noox-mac --port 7878
 
       Before connecting, make sure the noox app is running on the Android tablet.
+
+      To update later:
+        brew upgrade charlie-xing/noox/noox-mac
     EOS
   end
 

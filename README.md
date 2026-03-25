@@ -5,8 +5,7 @@ Homebrew tap for [noox](https://github.com/charlie-xing/noox) — use an Android
 ## Install
 
 ```bash
-brew tap charlie-xing/noox
-brew install noox-mac
+brew install charlie-xing/noox/noox-mac
 ```
 
 ## Usage
