@@ -1,23 +1,17 @@
 class NooxMac < Formula
   desc "Use an Android tablet as a macOS USB terminal display (macOS host bridge)"
   homepage "https://github.com/charlie-xing/noox"
-  url "https://github.com/charlie-xing/noox/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  url "https://github.com/charlie-xing/noox/releases/download/v0.1.0/noox-mac-0.1.0-macos.tar.gz"
+  sha256 "631d873ae595f8a528be364c647c3633594895d3b73cb958221b056b68929bdd"
+  version "0.1.0"
   license "MIT"
-  head "https://github.com/charlie-xing/noox.git", branch: "master"
 
-  # Build-time dependency only — Rust is not needed at runtime.
-  depends_on "rust" => :build
-
-  # noox-mac has NO runtime brew dependencies:
-  # libusb is statically linked via rusb's "vendored" feature.
-  # All other dependencies are standard macOS frameworks
-  # (CoreFoundation, IOKit, Security).
+  # Pre-built universal binary (arm64 + x86_64).
+  # No build-time or runtime dependencies:
+  # libusb is statically linked; all other deps are standard macOS frameworks.
 
   def install
-    system "cargo", "build", "--release", "-p", "noox-mac",
-           *std_cargo_args(root: buildpath, path: "crates/noox-mac")
-    bin.install "target/release/noox-mac"
+    bin.install "noox-mac"
   end
 
   def caveats
